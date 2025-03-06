@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/number-of-islands
 
 class Solution:
+    # Time: O(row*col)
+    # Space: O(row*col)
     def numIslands(self, grid: list[list[str]]) -> int:
         rows = len(grid)
         cols = len(grid[0])
@@ -8,8 +10,6 @@ class Solution:
         islands = 0
         directions = [(1,0), (0,1), (-1,0), (0,-1)]
 
-        # Time: O(row*col)
-        # Space: O(row*col)
         for row in range(rows):
             for col in range(cols):
                 if visited[row][col]:
@@ -26,10 +26,14 @@ class Solution:
                     for direction in directions:
                         newRow = toVisit[0] + direction[0]
                         newCol = toVisit[1] + direction[1]
+
                         if not (0 <= newRow < rows and 0 <= newCol < cols):
                             continue
-                        if visited[newRow][newCol] or grid[newRow][newCol] != "1":
+                        if visited[newRow][newCol]:
                             continue
+                        if grid[newRow][newCol] != "1":
+                            continue
+
                         toVisits.append((newRow, newCol))
                 islands += 1
 
