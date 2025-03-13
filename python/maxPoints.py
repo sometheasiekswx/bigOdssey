@@ -3,7 +3,7 @@
 from collections import defaultdict
 
 class Solution:
-    # Time: O(n + n!)
+    # Time: O(n^2)
     # Space: O(1)
     def maxPoints(self, points: list[list[int]]) -> int:
         n, highestCount = len(points), 1
@@ -12,7 +12,7 @@ class Solution:
         # O(n)
         for i in range(n):
             slopes = defaultdict(lambda: 1)
-            # O(n!)
+            # O(n)
             for j in range(i+1,n):
                 # slope = (y2 - y1) / (x2 - x1)
                 y2, y1 = points[j][1], points[i][1]
