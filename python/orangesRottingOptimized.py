@@ -1,3 +1,9 @@
+# https://leetcode.com/problems/rotting-oranges/description/
+
+# Get all the rotting oranges in queue
+# Go through each orange, spread rot
+# Add the new rotting oranges in queue
+
 from collections import deque
 
 class Solution:
