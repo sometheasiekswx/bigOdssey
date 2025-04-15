@@ -9,6 +9,8 @@ class ListNode:
 
 
 """
+# https://leetcode.com/problems/merge-k-sorted-lists
+
 - Collect all node values into nodesValues
     - Go through every ListNode in lists
     - For each ListNode, heappush the values of all its node
