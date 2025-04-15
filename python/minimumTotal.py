@@ -1,4 +1,6 @@
 '''
+https://leetcode.com/problems/triangle
+
 Use bottom-up dynamic programming to find minimum path sum:
 1. Start from bottom row
 2. For each number above current row:
