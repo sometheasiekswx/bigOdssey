@@ -19,6 +19,8 @@ class Solution:
         return found, count, right
 
     """
+    https://leetcode.com/problems/substring-with-concatenation-of-all-words
+
     Optimized sliding window:
     - Since all words have the same length (let's say length=3), divide the string into groups 
       starting at positions 0, 1, and 2. This ensures all possible word positions are checked.
